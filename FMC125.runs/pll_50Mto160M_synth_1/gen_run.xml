@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="pll_50Mto160M_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1508727554">
-  <File Type="PA-TCL" Name="pll_50Mto160M.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="pll_50Mto160M_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="pll_50Mto160M.tcl"/>
   <File Type="RDS-RDS" Name="pll_50Mto160M.vds"/>
   <File Type="RDS-UTIL" Name="pll_50Mto160M_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="pll_50Mto160M_utilization_synth.pb"/>

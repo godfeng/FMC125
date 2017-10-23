@@ -7,8 +7,10 @@ create_project -in_memory -part xc7k325tffg900-2
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir {D:/Document/FPGA Code/FMC125/FMC125.cache/wt} [current_project]
 set_property parent.project_path {D:/Document/FPGA Code/FMC125/FMC125.xpr} [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kc705:part0:1.5 [current_project]
@@ -18,6 +20,12 @@ read_verilog -library xil_defaultlib {
   {D:/Document/FPGA Code/FMC125/FMC125.srcs/sources_1/new/ad9777_spi.v}
   {D:/Document/FPGA Code/FMC125/FMC125.srcs/sources_1/new/DAC_Top.v}
 }
+read_ip -quiet {{D:/Document/FPGA Code/FMC125/FMC125.srcs/sources_1/ip/pll_50Mto160M/pll_50Mto160M.xci}}
+set_property used_in_implementation false [get_files -all {{d:/Document/FPGA Code/FMC125/FMC125.srcs/sources_1/ip/pll_50Mto160M/pll_50Mto160M_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{d:/Document/FPGA Code/FMC125/FMC125.srcs/sources_1/ip/pll_50Mto160M/pll_50Mto160M.xdc}}]
+set_property used_in_implementation false [get_files -all {{d:/Document/FPGA Code/FMC125/FMC125.srcs/sources_1/ip/pll_50Mto160M/pll_50Mto160M_ooc.xdc}}]
+set_property is_locked true [get_files {{D:/Document/FPGA Code/FMC125/FMC125.srcs/sources_1/ip/pll_50Mto160M/pll_50Mto160M.xci}}]
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -26,6 +34,9 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc {{D:/Document/FPGA Code/FMC125/FMC125.srcs/constrs_1/new/adda.xdc}}
+set_property used_in_implementation false [get_files {{D:/Document/FPGA Code/FMC125/FMC125.srcs/constrs_1/new/adda.xdc}}]
+
 
 synth_design -top ADDA_Top -part xc7k325tffg900-2
 
