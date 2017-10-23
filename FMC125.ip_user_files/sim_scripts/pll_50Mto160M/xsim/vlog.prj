@@ -1,0 +1,4 @@
+verilog xil_defaultlib "../../../../FMC125.srcs/sources_1/ip/pll_50Mto160M/pll_50Mto160M_clk_wiz.v" --include "../../../ipstatic"
+verilog xil_defaultlib "../../../../FMC125.srcs/sources_1/ip/pll_50Mto160M/pll_50Mto160M.v" --include "../../../ipstatic"
+verilog xil_defaultlib "glbl.v"
+nosort

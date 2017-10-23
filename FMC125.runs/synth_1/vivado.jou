@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:55:03 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Mon Oct 23 15:27:40 2017
+# Process ID: 15392
+# Current directory: D:/Document/FPGA Code/FMC125/FMC125.runs/synth_1
+# Command line: vivado.exe -log ADDA_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ADDA_Top.tcl
+# Log file: D:/Document/FPGA Code/FMC125/FMC125.runs/synth_1/ADDA_Top.vds
+# Journal file: D:/Document/FPGA Code/FMC125/FMC125.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ADDA_Top.tcl -notrace
